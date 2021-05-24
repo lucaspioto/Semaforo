@@ -1,0 +1,78 @@
+/* Semáforo realista CSS */
+* {
+    background: #45484d;
+}
+ul.semaforo {
+    float:left;
+    position: relative;
+    width: 100px;
+    margin: 0 50px;
+    padding: 15px;
+    list-style-type: none;
+    border: 6px double grey;
+    background: black;
+    background: linear-gradient( -90deg, #45484d 0%, #000000 100%);
+    border-radius: 20%;
+    box-shadow: 0px 0px 0 20px rgba(0,0,0,.8);
+    }
+    ul.semaforo li {
+    position:relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: lightgrey;
+    margin: 10px 0;
+    background: linear-gradient(top, rgba(187,187,187,1) 0%,rgba(119,119,119,1) 99%);
+    box-shadow: inset 0 -5px 15px rgba(255,255,255,0.4),
+    inset -2px -1px 40px rgba(0,0,0,0.4),
+    0 0 1px #000;
+    }
+    ul.semaforo li:after {
+    content: "";
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+    border-radius: 30px / 15px;
+    }
+
+    .rojoLigado li:nth-of-type(1) {
+    background: #cc0000;
+    background: radial-gradient(center, ellipse cover, #ff0000 1%, #cc0000 100%);
+    box-shadow: 0px 0px 15px 10px #ff00009d;
+    }
+    .naranjaLigado li:nth-of-type(2) {
+    background: #ffe600;
+    box-shadow: 0px 0px 15px 10px #ffd0009d;
+    }
+    .verdeLigado li:nth-of-type(3) {
+    background: #00ff00;
+    box-shadow: 0px 0px 15px 8px #33ff009d;
+    }
+
+    .rojoDesligado li:nth-of-type(1) {
+    background: #813a3a;
+    background: radial-gradient(center, ellipse cover, #ff0000 1%, #cc0000 100%);
+    transition: 0.3s ease;
+    }
+    .naranjaDesligado li:nth-of-type(2) {
+    background: #b49d52;
+    transition: 0.3s ease;
+    }
+    .verdeDesligado li:nth-of-type(3) {
+    background: #2d612d;
+    transition: 0.3s ease;
+    }
+
+    .container-1 {
+        background-color: yellow;
+        width: 300px;
+        height: 380px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+    }
