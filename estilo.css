@@ -68,12 +68,17 @@ ul.semaforo {
 
     .container {
         background-color: yellow;
-        width: 300px;
-        height: 380px;
-        position: relative;
+        width: 200px;
+        height: 200px;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 50px;
         border-radius: 10px;
+    }
+    
+    .box {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
     }
