@@ -59,27 +59,27 @@ function meuEscopo() {
         }
 
         function iniciaTime(tempo = 0) {
-        
+
             if (estagio = 1) {
-    
+
                 if (tempo = 0) {
-                    tempo = 10;
+                    count = 5;
                 }
-    
+
             }
-    
+
             if (estagio = 3 && tempo == 0) {
-                tempo = 20;
+                count = 10;
             }
-    
+
             if (tempo >= 0) {
                 tempo--;
             }
-    
-            document.getElementById('container-1').innerHTML = tempo;
+
+            document.getElementById('container').innerHTML = tempo;
         }
-        
-        
+
+
         timeSet = setTimeout(iniciaTime(), 1000);
     }
     estagios();
@@ -94,9 +94,16 @@ function meuEscopo() {
         semaforo.classList.remove('naranjaLigado');
     }
 
-   
+}
 
+var count = new Number();
 
+function startCountdown() {
+    if ((count - 1) >= 0) {
+        count = count - 1;
+        container.innerText = count;
+        setTimeout('startCountdown()', 1000);
+    }
 }
 
 meuEscopo();
