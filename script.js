@@ -82,6 +82,9 @@ function startCountdown() {
 	if ((count - 1) >= 0) {
 		count = count - 1;
 		container.innerText = count;
+		if (count < 10) {
+			container.innerText = '0' + count;
+		}
 		setTimeout('startCountdown()', 1000);
 	}
 }
